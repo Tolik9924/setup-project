@@ -1,0 +1,35 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "source/program.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix --color"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+        "npm run lint:fix",
+        "git add"
+    ]
+  }
+}

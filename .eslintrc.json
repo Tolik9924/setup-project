@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended", "eslint-config-airbnb-base/legacy"],
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "eslint linebreak-style": ["error", "windows"],
+    "rules": {
+        "no-var": "error"
+    }
+}
